@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: . # Diretório atual onde está o Dockerfile
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080" # Porta exposta no container mapeada para o host
+    restart: always # Reinicia automaticamente em caso de falhas
